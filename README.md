@@ -1,6 +1,6 @@
 <p align="center"> <img src="https://raw.githubusercontent.com/qeeqbox/local-file-inclusion/main/local-file-inclusion.png"></p>
 
-A threat actor may trick a vulnerable target to include/retrieve local file
+A threat actor may cause a vulnerable target to include/retrieve local file
 
 ## Example #1
 1. A threat actor sends a malicious request that includes the local file name to a vulnerable target
