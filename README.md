@@ -17,9 +17,9 @@ Use the admin default credentials (username: admin and password: admin) to log i
 Click Open Full Log to review the entire logs file
 <p align="center"> <img src="https://raw.githubusercontent.com/qeeqbox/local-file-inclusion/main/content/3.png"></p>
 The logs file locaiton is logs/httpd.log and is reviewed as raw file
-<p align="center"> <img src="https://raw.githubusercontent.com/qeeqbox/remote-file-inclusion/main/content/4.png"></p>
+<p align="center"> <img src="https://raw.githubusercontent.com/qeeqbox/local-file-inclusion/main/content/4.png"></p>
 Change the logs file to any internal file, such as ../webapp.py, and press Enter. The file will be retrieved, and the webapp.py source code will be shown.
-<p align="center"> <img src="https://raw.githubusercontent.com/qeeqbox/remote-file-inclusion/main/content/5.png"></p>
+<p align="center"> <img src="https://raw.githubusercontent.com/qeeqbox/local-file-inclusion/main/content/5.png"></p>
 
 ## Code
 When a user requests the entire logs file to review, the logs location can be editted
