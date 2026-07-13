@@ -22,7 +22,7 @@ Change the logs file to any internal file, such as ../webapp.py, and press Enter
 <p align="center"> <img src="https://raw.githubusercontent.com/qeeqbox/local-file-inclusion/main/content/5.png"></p>
 
 ## Code
-When a user requests the entire logs file to review, the logs location can be editted
+When a user requests the entire logs file to review, the logs location can be edited
 
 ```py
 def do_GET(self):
