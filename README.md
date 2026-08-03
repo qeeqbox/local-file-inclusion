@@ -1,7 +1,31 @@
 <p align="center"> <img src="https://raw.githubusercontent.com/qeeqbox/local-file-inclusion/main/content/local-file-inclusion.svg"></p>
 
-An application retrieves local files without properly validating or restricting the provided file path. A threat actor can exploit this vulnerability by manipulating the file path to gain access to sensitive or unintended files on the underlying system. By doing so, the attacker could cause the application to read internal files that contain threat actor information. This may lead to unauthorized disclosure of information and data theft.
+## Local File Inclusion (LFI)
+Local File Inclusion (LFI) is a web application vulnerability that occurs when an application includes a file from the local file system based on untrusted user input. If an attacker can manipulate the file path used by a file inclusion function, they may gain access to sensitive files, disclose application source code, or, under certain circumstances, execute arbitrary code by tricking the application into including a malicious local file.
 
+## How LFI Works
+1. Identify Vulnerable Parameters: Attackers look for parameters in web applications that are used to include files, such as `include()`, `require()`, `include_once()`, or `require_once()` in PHP.
+2. Craft Malicious Input: Attackers create input that includes a path to a local file they wish to access.
+3. Exploit the Vulnerability: The attacker sends the malicious input to a vulnerable parameter, prompting the web application to read the specified local file.
+
+## Impact of LFI
+Successful LFI attacks can lead to the following consequences:
+- Data Theft: Sensitive information, including databases, configuration files, and credentials, may be accessed or stolen.
+- Server Compromise: Attackers may gain full control of the vulnerable server.
+- Privilege Escalation: If the web server has excessive privileges, attackers may obtain broader access to the operating system.
+- Reputation and Financial Damage: Organizations may face service disruptions, financial losses, regulatory penalties, and damage to customer trust.
+
+## LFI Mitigation Strategies
+To prevent LFI vulnerabilities:
+- Do Not Trust User Input for File Inclusion: Avoid allowing users to directly specify file names or paths. Instead, use predefined mappings or allowlists.
+- Disable Local File Inclusion: Only enable the local file inclusion feature when absolutely necessary.
+- Validate User Input: If user input must be accepted, ensure it is validated against a predefined list of acceptable values. Do not allow arbitrary file names or URLs.
+- Follow the Principle of Least Privilege: Configure the web server with only the permissions necessary for its intended functionality. This practice limits potential damage if an attacker successfully exploits the application.
+- Keep Software Updated: Regularly apply security updates to reduce exposure to known vulnerabilities.
+- Use a Web Application Firewall (WAF): A WAF can help detect and block malicious requests aimed at exploiting file inclusion vulnerabilities.
+- Perform Regular Security Testing: Conduct routine security assessments to identify insecure file inclusion before attackers can exploit it.
+
+## LFI Example
 Clone this current repo recursively
 ```sh
 git clone --recurse-submodules https://github.com/qeeqbox/local-file-inclusion
