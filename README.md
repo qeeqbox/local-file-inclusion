@@ -9,7 +9,7 @@ Local File Inclusion (LFI) is a web application vulnerability that occurs when a
 3. Exploit the Vulnerability: The attacker sends the malicious input to a vulnerable parameter, prompting the web application to read the specified local file.
 
 ## Impact of LFI
-Successful LFI attacks can lead to the following consequences:
+Successful LFI exploitation can enable an attacker to:
 - Data Theft: Sensitive information, including databases, configuration files, and credentials, may be accessed or stolen.
 - Server Compromise: Attackers may gain full control of the vulnerable server.
 - Privilege Escalation: If the web server has excessive privileges, attackers may obtain broader access to the operating system.
